@@ -42,7 +42,9 @@ this.employeeService.selectedEmployee=
 
 onSubmit(form:NgForm)
 {
-  if(form.value._id =="")
+  console.log(form.value._id);
+  debugger;
+  if(!form.value._id )
   {
   this.employeeService.postEmployee(form.value).subscribe(
       (res)=>
